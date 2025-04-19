@@ -26,7 +26,7 @@ class Window(tk.Tk):
         self.resizable(False, False)
         self.iconbitmap(default="icon.ico")
 
-        self.calculate: Callable[[Window, tk.Event], None] = lambda *args: None
+        self.calculate: Callable[[Window], None] = lambda a: None
         self.concurso = tk.StringVar(self)
         self.numbers = tk.StringVar(self)
         self.output = tk.StringVar(self)
