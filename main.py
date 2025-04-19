@@ -2,13 +2,14 @@ from collections.abc import Callable
 from urllib.error import HTTPError
 from threading import Thread
 from urllib import request
+from typing import Union
 from tkinter import ttk
 import tkinter as tk
 from utils import *
 import json
 import time
 
-def _get_games():
+def _get_games() -> Union[list[str], str]:
     url = request.Request("https://loteriascaixa-api.herokuapp.com/api", method="GET")
     try:
         with request.urlopen(url) as f:
@@ -16,7 +17,7 @@ def _get_games():
     except HTTPError as e:
         return f"Erro ao conectar à loteria. Código de erro: {e.code}"
     
-    return list[str](eval(data))
+    return eval(data)
 
 class Window(tk.Tk):
     def __init__(self):
