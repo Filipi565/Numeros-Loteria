@@ -14,6 +14,7 @@ Programa para verificar acertos em concursos de loteria usando a API: [Loterias 
 ```bash
 git clone https://github.com/Filipi565/Numeros-Loteria.git
 cd Numeros-Loteria
+pip3 install -r requirements.txt
 python3 main.py
 ```
 
