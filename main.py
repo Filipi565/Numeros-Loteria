@@ -1,8 +1,7 @@
-from collections.abc import Callable
+from typing import Union, Callable
 from urllib.error import HTTPError
 from threading import Thread
 from urllib import request
-from typing import Union
 from tkinter import ttk
 import tkinter as tk
 from utils import *
